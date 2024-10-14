@@ -1,0 +1,46 @@
+Social Media Application
+
+Overview
+
+This Social Media Application is designed to manage users, their friendships, posts, and feed interactions in a social network environment. The application is modularized into different components, allowing for extensibility and maintainability. It supports multiple tasks, each focusing on different aspects of user interaction and content management.
+
+Features
+
+User Management:
+Load user data from a persistent storage (users.db).
+Retrieve user information by username or user ID.
+Friendship Management:
+Handle friendships between users.
+Implement functionalities to manage friend requests, acceptances, and removals.
+Post Management:
+Create and manage posts by users.
+Support for hierarchical posts, including replies and threads.
+Efficient memory management to ensure all post-related data is correctly allocated and freed.
+Feed Generation:
+Generate a user feed based on friendships and posts.
+Allow users to view posts from their friends and interact with them.
+Components
+
+users.h: Handles user-related functionalities, including loading user data and retrieving user information.
+friends.h: Manages friendships, including the creation and deletion of friend relationships.
+posts.h: Defines structures and functions for creating, managing, and displaying posts.
+feed.h: Responsible for generating and displaying user feeds based on posts and friendships.
+Initialization
+
+The application requires initialization of various components before use. This is done in the init_tasks function, which sets up the necessary components based on the defined task during compilation. Each task has its own focus, allowing for customized behavior and functionality.
+
+Memory Management
+
+The application employs dynamic memory allocation to handle user data, posts, and other structures. Careful attention is given to freeing allocated memory to avoid memory leaks. Functions are provided to recursively free memory associated with posts and related structures.
+
+Input Handling
+
+User commands are processed in a loop, allowing for continuous interaction. The application handles different command types based on the task defined during compilation, ensuring flexibility in command processing and functionality.
+
+Compilation
+
+The application is compiled with different preprocessor directives to enable or disable specific tasks. This allows for focused testing and development on individual components of the application without affecting others.
+
+Conclusion
+
+This Social Media Application serves as a comprehensive platform for managing social interactions and content creation. Its modular design and careful memory management make it a robust solution for simulating a social media environment. Users can extend the application by adding new features or modifying existing ones to better fit their needs.
